@@ -29,3 +29,4 @@ htmlcov/
 .vscode
 prectice.py
 venv
+.env_file
