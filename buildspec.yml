@@ -18,13 +18,14 @@ phases:
   build:
     commands:
       - docker build --tag $REPOSITORY_URI:$TAG .
-    env:
-       parameter-store:         
-         JWT_SECRET: JWT_SECRET
+    
   
   
 
   post_build:
+    env:
+       parameter-store:         
+         JWT_SECRET: JWT_SECRET
     commands:
       - docker push $REPOSITORY_URI:$TAG
       - CREDENTIALS=$(aws sts assume-role --role-arn $EKS_KUBECTL_ROLE_ARN --role-session-name codebuild-kubectl --duration-seconds 900)
