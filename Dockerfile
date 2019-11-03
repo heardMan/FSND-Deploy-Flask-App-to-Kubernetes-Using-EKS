@@ -1,6 +1,6 @@
 FROM python:stretch
 COPY . /
-WORKDIR /
+WORKDIR  /APP
 
 RUN pip install -r requirements.txt
 
