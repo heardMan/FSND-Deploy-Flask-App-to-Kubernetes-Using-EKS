@@ -39,6 +39,7 @@ phases:
       - pwd
       - ls
       - python3 -V
+      - pip3 list
       - pip3 install typing
       - pip3 install "pytest<5"
       - pip3 install setuptools
