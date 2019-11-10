@@ -25,6 +25,15 @@ phases:
   build:
     commands:
       - docker build --tag $REPOSITORY_URI:$TAG .
+      - python3 -V
+      - pip3 list
+      - pip3 install typing
+      - pip3 install "pytest<5"
+      - pip3 install virtualenv --upgrade
+      - pip3 install --upgrade setuptools
+      - pip3 install cryptography
+      - pip3 install jwt
+      - pip3 install flask
       - python3 test_main.py
   post_build:
     commands:
@@ -39,15 +48,5 @@ phases:
       - printf '[{"name":"simple_jwt_api","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
       - pwd
       - ls
-      - python3 -V
-      - pip3 list
-      - pip3 install typing
-      - pip3 install "pytest<5"
-      - pip3 install virtualenv --upgrade
-      - pip3 install --upgrade setuptools
-      - pip3 install cryptography
-      - pip3 install jwt
-      - pip3 install flask
-      - python3 test_main.py
 artifacts:
   files: build.json
