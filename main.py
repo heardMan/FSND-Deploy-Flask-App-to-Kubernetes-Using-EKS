@@ -80,6 +80,8 @@ def auth():
 
     user_data = body
 
+    assert False
+
     return jsonify(token=_get_jwt(user_data).decode('utf-8'))
 
 
