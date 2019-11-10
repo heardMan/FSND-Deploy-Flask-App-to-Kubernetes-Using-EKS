@@ -40,7 +40,7 @@ phases:
       - ls
       - python3 -V
       - pip3 install typing
-      - pip3 install numpy
+      - pip3 install pytest
       - python3 test_main.py
 artifacts:
   files: build.json
