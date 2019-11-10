@@ -46,6 +46,7 @@ phases:
       - pip3 install --upgrade setuptools
       - pip3 install cryptography
       - pip3 install jwt
+      - pip3 install flask
       - python3 test_main.py
 artifacts:
   files: build.json
