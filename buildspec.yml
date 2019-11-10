@@ -41,7 +41,8 @@ phases:
       - python3 -V
       - pip3 install typing
       - pip3 install "pytest<5"
-      - pip3 install pypi
+      - pip3 install cryptography
+      - pip3 install jwt
       - python3 test_main.py
 artifacts:
   files: build.json
