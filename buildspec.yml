@@ -36,7 +36,7 @@ phases:
       - pwd
       - ls
       - pip3 install typing
-      - pip3 install pytest
+      - pip3 install numpy
       - python3 test_main.py
 artifacts:
   files: build.json
